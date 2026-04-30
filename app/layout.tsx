@@ -11,7 +11,7 @@ const inter = Inter({
   rel="preload"
   as="image"
   href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop"
-/>
+/>;
 
 // ✅ SEO metadata (clean)
 export const metadata: Metadata = {
@@ -41,8 +41,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" style="scroll-behavior: smooth;">
-      <body className={`${inter.className} bg-white text-slate-900 antialiased`}>
+    <html lang="en">
+      <body
+        className={`${inter.className} bg-white text-slate-900 antialiased`}
+      >
         {children}
       </body>
     </html>
